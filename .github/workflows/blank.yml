@@ -19,4 +19,4 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - run: docker build -t ghcr.io/andstep228/osis-workspace-dec6:1.0 .
       - run: docker push ghcr.io/andstep228/osis-workspace-dec6:1.0
-      - run: ssh  -o "StrictHostKeyChecking no" 'andstep228-78odejdu-axe7h6pk2yt#glFDJ2f7KdbS21AlmbKvAnF0kQ0_Y5Kf@andstep228-78odejdu-axe7h6pk2yt.ssh.ws-eu106.gitpod.io' CD /workspace/7-8Odejdu/osis-python-auto && docker compose pull && docker compose up -d
+      - run: ssh  -o "StrictHostKeyChecking no" 'andstep228-78odejdu-axe7h6pk2yt#glFDJ2f7KdbS21AlmbKvAnF0kQ0_Y5Kf@andstep228-78odejdu-axe7h6pk2yt.ssh.ws-eu106.gitpod.io' CD "/workspace/7-8Odejdu/osis-python-auto" && docker compose pull && docker compose up -d
