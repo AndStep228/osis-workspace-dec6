@@ -1,2 +1,2 @@
-print("andrey padl<F11a")
+print("andrey padla")
 
