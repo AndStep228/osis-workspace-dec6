@@ -24,3 +24,15 @@ jobs:
       - run: ssh  -o "StrictHostKeyChecking no" 'andstep228-78odejdu-axe7h6pk2yt#I2Ph_sfn4hL8YGEFHXmpWd5Kl7gD.CFa@andstep228-78odejdu-axe7h6pk2yt.ssh.ws-eu106.gitpod.io' "cd /workspace/7-8Odejdu/osis-python-auto && docker compose pull && docker compose up -d"
 
       
+  telegram:
+    name: telega
+    runs-on: ubuntu-latest
+    if: success()
+    steps:
+      - uses: actions/checkout@master
+      - name: send telegram message on push
+        uses: appleboy/telegram-action@master
+        with:
+              to: ${{ secrets.TELEGRAM_TO }}
+              token: ${{ secrets.TELEGRAM_TOKEN }}
+              message: Матвей лошочек
